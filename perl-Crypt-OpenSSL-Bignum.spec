@@ -1,7 +1,7 @@
 %define module	Crypt-OpenSSL-Bignum
 %define name	perl-%{module}
-%define version	0.03
-%define release	%mkrel 5
+%define version	0.04
+%define release	%mkrel 1
 
 Summary:	%{module} module for perl 
 Name:		%{name}
