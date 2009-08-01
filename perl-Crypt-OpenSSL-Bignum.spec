@@ -1,24 +1,24 @@
-%define module	Crypt-OpenSSL-Bignum
-%define name	perl-%{module}
-%define version	0.04
-%define release	%mkrel 4
+%define upstream_name	 Crypt-OpenSSL-Bignum
+%define upstream_version 0.04
 
-Summary:	%{module} module for perl 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	%{upstream_name} module for perl 
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:	%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
-BuildRequires:	perl-devel openssl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Crypt/%{upstream_name}-%{upstream_version}.tar.bz2
+
+BuildRequires:	openssl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 A Perl interface to OpenSSL's multiprecision integer arithmetic libraries.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor </dev/null
@@ -40,4 +40,3 @@ A Perl interface to OpenSSL's multiprecision integer arithmetic libraries.
 %{perl_vendorlib}/*/auto/Crypt/
 %{perl_vendorlib}/*/Crypt/
 %{_mandir}/*/*
-
