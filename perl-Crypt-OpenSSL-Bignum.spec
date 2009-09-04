@@ -10,7 +10,8 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Crypt/%{upstream_name}-%{upstream_version}.tar.bz2
 BuildRequires:	openssl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 A Perl interface to OpenSSL's multiprecision integer arithmetic libraries.
