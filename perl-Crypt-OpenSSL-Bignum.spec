@@ -7,7 +7,7 @@ Release:	9
 Summary:	%{upstream_name} module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Crypt/%{upstream_name}-%{upstream_version}.tar.bz2
 BuildRequires:	openssl-devel
 BuildRequires:	perl-devel
