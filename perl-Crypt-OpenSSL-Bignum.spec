@@ -1,14 +1,14 @@
 %define upstream_name	 Crypt-OpenSSL-Bignum
-%define upstream_version 0.04
+%define upstream_version 0.09
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	9
+Version:    %{upstream_version}
+Release:	1
 Summary:	%{upstream_name} module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Crypt/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://github.com/kmx/perl-Crypt-OpenSSL-Bignum
+Source0:	https://cpan.metacpan.org/authors/id/K/KM/KMX/Crypt-OpenSSL-Bignum-%{upstream_version}.tar.gz
 BuildRequires:	make
 BuildRequires:	openssl-devel
 BuildRequires:	perl-devel
