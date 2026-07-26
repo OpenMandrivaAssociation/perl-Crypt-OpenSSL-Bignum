@@ -1,14 +1,12 @@
 %define upstream_name	 Crypt-OpenSSL-Bignum
-%define upstream_version 0.09
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	1
+Version:    0.09
+Release:	2
 Summary:	%{upstream_name} module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/kmx/perl-Crypt-OpenSSL-Bignum
-Source0:	https://cpan.metacpan.org/authors/id/K/KM/KMX/Crypt-OpenSSL-Bignum-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/K/KM/KMX/Crypt-OpenSSL-Bignum-%{version}.tar.gz
 BuildRequires:	make
 BuildRequires:	openssl-devel
 BuildRequires:	perl-devel
@@ -18,7 +16,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}
 A Perl interface to OpenSSL's multiprecision integer arithmetic libraries.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -70,9 +68,7 @@ rm -rf %{buildroot}
 
   + Jérôme Quelin <jquelin@mandriva.org>
     - force rebuild
-    - rebuild using %%perl_convert_version
-
-* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 0.04-4mdv2009.0
+    - rebuild using %0.09 Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 0.04-4mdv2009.0
 + Revision: 256271
 - rebuild
 
