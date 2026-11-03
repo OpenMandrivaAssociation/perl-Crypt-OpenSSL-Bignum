@@ -11,6 +11,7 @@ Source0:	https://cpan.metacpan.org/authors/id/K/KM/KMX/Crypt-OpenSSL-Bignum-%{ve
 BuildRequires:	make
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	perl-devel
+BuildRequires:	perl(Test)
 
 %description
 Perl interface to OpenSSL's multiprecision integer arithmetic.
